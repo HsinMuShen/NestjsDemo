@@ -1,0 +1,66 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.title {
+  font-size: 72px;
+  font-weight: 600;
+}
+
+.image {
+  width: 300px;
+}
+
+.buttonWrapper {
+  width: 300px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+}
+
+.buttonP {
+  cursor: pointer;
+  width: 100px;
+  height: 40px;
+  font-size: 20px;
+  background-color: #b08221;
+  border: 0;
+  color: #ffffff;
+}
+.buttonT {
+  cursor: pointer;
+  width: 100px;
+  height: 40px;
+  font-size: 20px;
+  background-color: #b02a21;
+  border: 0;
+  color: #ffffff;
+}
+
+.answerWrapper {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #0000007d;
+}
+
+.answer {
+  color: #d9d9d9;
+  font-size: 50px;
+  font-weight: 600;
+  margin: 175px 0;
+}
+
+.againButton {
+  width: 200px;
+  height: 40px;
+  cursor: pointer;
+  background-color: #cbcbcb;
+  border: 0;
+  font-weight: 600;
+}
