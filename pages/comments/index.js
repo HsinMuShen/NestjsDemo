@@ -9,49 +9,49 @@ const CommentsPage = () => {
     setComments(data);
   };
 
-  const submitComment = async () => {
-    const response = await fetch("/api/comments", {
-      method: "POST",
-      body: JSON.stringify({ comment }),
-      headers: {
-        "Content-Type": "application/json",
-      },
-    });
-    const data = await response.json();
-    console.log(data);
-    fetchComments();
-  };
+  // const submitComment = async () => {
+  //   const response = await fetch("/api/comments", {
+  //     method: "POST",
+  //     body: JSON.stringify({ comment }),
+  //     headers: {
+  //       "Content-Type": "application/json",
+  //     },
+  //   });
+  //   const data = await response.json();
+  //   console.log(data);
+  //   fetchComments();
+  // };
 
-  const deleteComment = async (commentId) => {
-    const response = await fetch(`/api/comments/${commentId}`, {
-      method: "DELETE",
-    });
-    const data = await response.json();
-    console.log(data);
-    fetchComments();
-  };
+  // const deleteComment = async (commentId) => {
+  //   const response = await fetch(`/api/comments/${commentId}`, {
+  //     method: "DELETE",
+  //   });
+  //   const data = await response.json();
+  //   console.log(data);
+  //   fetchComments();
+  // };
 
   return (
     <>
-      <input
+      {/* <input
         type="text"
         value={comment}
         onChange={(e) => setComment(e.target.value)}
       />
-      <button onClick={submitComment}>Submit</button>
+      <button onClick={submitComment}>Submit</button> */}
       <button onClick={fetchComments}>Load comments</button>
       {comments.map((comment) => {
         return (
           <div key={comment.id}>
             {comment.id + " "}
             {comment.text}
-            <button
+            {/* <button
               onClick={() => {
                 deleteComment(comment.id);
               }}
             >
               Delete
-            </button>
+            </button> */}
           </div>
         );
       })}

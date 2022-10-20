@@ -22,12 +22,16 @@ export const getStaticPaths = async () => {
 export const getStaticProps = async (context) => {
   const { params } = context;
   const { commentId } = params;
-  const comment = comments.find(
-    (comment) => comment.id === parseInt(commentId)
+  const response = await fetch(
+    `http://localhost:3000/api/comments/${commentId}`
   );
+  const data = await response.json();
+  // const comment = comments.find(
+  //   (comment) => comment.id === parseInt(commentId)
+  // );
   return {
     props: {
-      comment,
+      comment: data,
     },
   };
 };
